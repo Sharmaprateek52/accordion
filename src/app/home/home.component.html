@@ -1,0 +1,7 @@
+<h2 class="title">Accordion</h2>
+<div *ngFor="let accord of accords">
+    <button class="accordion" (click)="accord.opened = !accord.opened">{{accord.title}}</button>
+    <div class="panel " *ngIf="accord.opened" >
+        <p>{{accord.description}}</p>
+    </div>
+</div>
